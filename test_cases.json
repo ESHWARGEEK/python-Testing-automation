@@ -1,0 +1,77 @@
+[
+  {
+    "id": "TC001",
+    "function": "is_valid_email",
+    "input": ["test@example.com"],
+    "expected": true
+  },
+  {
+    "id": "TC002",
+    "function": "is_valid_email",
+    "input": ["invalid-email"],
+    "expected": false
+  },
+  {
+    "id": "TC003",
+    "function": "calculate_discount",
+    "input": {"price": 100.0, "percent": 20.0},
+    "expected": 80.0
+  },
+  {
+    "id": "TC004",
+    "function": "calculate_discount",
+    "input": {"price": 50.0, "percent": 150.0},
+    "expected": null,
+    "expect_exception": true
+  },
+  {
+    "id": "TC005",
+    "function": "validate_age",
+    "input": [25],
+    "expected": true
+  },
+  {
+    "id": "TC006",
+    "function": "validate_age",
+    "input": [-5],
+    "expected": false
+  },
+  {
+    "id": "TC007",
+    "function": "validate_age",
+    "input": [150],
+    "expected": false
+  },
+  {
+    "id": "TC008",
+    "function": "validate_age",
+    "input": [0],
+    "expected": true
+  },
+  {
+    "id": "TC009",
+    "function": "calculate_discount",
+    "input": {"price": 100.0, "percent": 10.0},
+    "expected": 85.0
+  },
+  {
+    "id": "TC010",
+    "function": "is_valid_email",
+    "input": ["user@domain"],
+    "expected": true
+  },
+  {
+    "id": "TC011",
+    "module": "api_checks",
+    "function": "check_api_status",
+    "input": ["https://jsonplaceholder.typicode.com/posts/1"],
+    "expected": {"status_code": 200, "ok": true}
+  },
+  {
+    "id": "TC012",
+    "module": "api_checks",
+    "function": "check_api_status",
+    "input": ["https://jsonplaceholder.typicode.com/invalid-endpoint"],
+    "expected": {"status_code": 404, "ok": false}
+  }
+]
